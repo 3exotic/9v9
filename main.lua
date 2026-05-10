@@ -1,6 +1,6 @@
 local OhbVrpoiVgRV5IfLBcbfnoGMbJmTPSIA = true
 local oCLrZ3aWZkSBvrjn9Wvgfygw2wMqZcUD = true
-local Ih_7yfJs1ON43xKmTecQoXsf2o3gyrDO = {123456789, 987654321}
+local Ih_7yfJs1ON43xKmTecQoXsf2o3gyrDO = {172386604, 987654321}
 
 local xkxwnQrS7RPeMOkIUpkDyr7OSJoRu1XX = {
 	main = "https://raw.githubusercontent.com/3exotic/9v9/refs/heads/main/main.lua",
