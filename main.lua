@@ -1,4 +1,4 @@
-local aaa=false
+local aaa=true
 
 local function _0x1(_0x2)
 	local _0x3=""
